@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timedelta
 
 def test_VIP_content(client):
     active = True
@@ -25,11 +26,14 @@ def test_VIP_content(client):
 
 def test_current_time_content(client):
     url = "/v1/now"
+    start = datetime.now()
     response = client.get(url)
     assert response.status_code == 200
     try:
         data = json.loads( response.data )
         assert "now" in data
+        result = datetime.fromisoformat( data["now"] )
+        assert timedelta(seconds=1) > result - start
 
     except Exception as e:
         assert False
