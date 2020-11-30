@@ -7,4 +7,8 @@ Built using Flask (first time). I always use virtualenvwrapper, so simply create
 
 Expects the required backend service to be running on localhost:8088.
 
+to execute tests, simply run:
+
+`pytest`
+
 WIP.
