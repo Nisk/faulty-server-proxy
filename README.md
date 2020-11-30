@@ -5,6 +5,6 @@ Built using Flask (first time). I always use virtualenvwrapper, so simply create
 
 `pip install -r requirements.txt`
 
-Expect the required backend service to be running on localhost:8088.
+Expects the required backend service to be running on localhost:8088.
 
 WIP.
